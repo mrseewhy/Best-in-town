@@ -293,7 +293,7 @@ const AppContextProvider = ({ children }: { children: ReactNode }) => {
         (cartItem) => cartItem.id === item.id
       );
 
-      let updatedCart;
+      let updatedCart: CartItem[];
       if (itemExists) {
         // Update only the quantity of the existing item
         updatedCart = prevCartItems.map((cartItem) =>
@@ -338,7 +338,7 @@ const AppContextProvider = ({ children }: { children: ReactNode }) => {
         (cartItem) => cartItem.id === item.id
       );
 
-      let updatedCart;
+      let updatedCart: CartItem[];
       if (itemExists) {
         updatedCart = prevCartItems.map((cartItem) =>
           cartItem.id === item.id
@@ -372,7 +372,7 @@ const AppContextProvider = ({ children }: { children: ReactNode }) => {
         (cartItem) => cartItem.id === item.id
       );
 
-      let updatedCart;
+      let updatedCart: CartItem[];
 
       if (itemExists) {
         // If the quantity is more than 1, decrease it by 1
