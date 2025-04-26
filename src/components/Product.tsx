@@ -5,7 +5,7 @@ const Product = ({ name, image, price, description, plant }) => {
   if (!context) {
     throw new Error("SomeComponent must be used within an AppContextProvider");
   }
-  const { addToCart, totalQuantity, changeQuantity } = context;
+  const { addToCart } = context;
   return (
     <div className="container mx-auto">
       <div className="bg-white border border-gray-200 rounded-xl">

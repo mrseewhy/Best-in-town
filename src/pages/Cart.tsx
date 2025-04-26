@@ -11,7 +11,7 @@ const Cart = () => {
   if (!context) {
     throw new Error("SomeComponent must be used within an AppContextProvider");
   }
-  const { cartItems, totalQuantity, totalPrice } = context;
+  const { cartItems, totalPrice } = context;
   return (
     <div>
       <Header />

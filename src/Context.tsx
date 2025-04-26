@@ -287,38 +287,6 @@ const AppContextProvider = ({ children }: { children: ReactNode }) => {
   const [totalQuantity, setTotalQuantity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  // const addToCart = (item: CartItem) => {
-  //   setCartItems((prevCartItems) => {
-  //     const itemExists = prevCartItems.find(
-  //       (cartItem) => cartItem.id === item.id
-  //     );
-
-  //     let updatedCart;
-  //     if (itemExists) {
-  //       // Update only the quantity of the existing item
-  //       updatedCart = prevCartItems.map((cartItem) =>
-  //         cartItem.id === item.id
-  //           ? { ...cartItem, quantity: cartItem.quantity + 1 }
-  //           : cartItem
-  //       );
-  //     } else {
-  //       // Add new item with quantity 1
-  //       updatedCart = [...prevCartItems, { ...item, quantity: 1 }];
-  //     }
-
-  //     // Calculate total price based on updated quantities
-  //     const newTotalPrice = updatedCart.reduce(
-  //       (sum, cartItem) => sum + cartItem.quantity * cartItem.price,
-  //       0
-  //     );
-
-  //     setTotalPrice(newTotalPrice);
-  //     setTotalQuantity(updatedCart.length); // total unique items only
-  //     item.addedToCart = true;
-  //     return updatedCart;
-  //   });
-  // };
-
   const addToCart = (item: CartItem) => {
     setCartItems((prevCartItems) => {
       const itemExists = prevCartItems.find(
@@ -364,40 +332,6 @@ const AppContextProvider = ({ children }: { children: ReactNode }) => {
 
   const clearCart = () => setCartItems([]);
 
-  // const addQuantity = (item) => {
-  //   setCartItems((prevCartItems) => {
-  //     const itemExists = prevCartItems.find(
-  //       (cartItem) => cartItem.id === item.id
-  //     );
-
-  //     let updatedCart;
-  //     if (itemExists) {
-  //       updatedCart = prevCartItems.map((cartItem) =>
-  //         cartItem.id === item.id
-  //           ? { ...cartItem, quantity: cartItem.quantity + 1 }
-  //           : cartItem
-  //       );
-  //     } else {
-  //       updatedCart = [...prevCartItems, { ...item, quantity: 1 }];
-  //     }
-
-  //     // Calculate total price
-  //     const newTotalPrice = updatedCart.reduce(
-  //       (sum, cartItem) => sum + cartItem.quantity * cartItem.price,
-  //       0
-  //     );
-  //     setTotalPrice(newTotalPrice);
-
-  //     // ✅ Here's the line you should change:
-  //     const newTotalQuantity = updatedCart.reduce(
-  //       (sum, cartItem) => sum + cartItem.quantity,
-  //       0
-  //     );
-  //     setTotalQuantity(newTotalQuantity);
-
-  //     return updatedCart;
-  //   });
-  // };
   const addQuantity = (item) => {
     setCartItems((prevCartItems) => {
       const itemExists = prevCartItems.find(
@@ -412,9 +346,6 @@ const AppContextProvider = ({ children }: { children: ReactNode }) => {
             : cartItem
         );
       }
-      // else {
-      //   updatedCart = [...prevCartItems, { ...item, quantity: 1 }];
-      // }
 
       // Calculate total price
       const newTotalPrice = updatedCart.reduce(
