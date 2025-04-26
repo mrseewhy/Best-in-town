@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import ProductInCart from "../components/ProductInCart";
 
 import { useContext } from "react";
-import { AppContext, AppContextProvider } from "../Context";
+import { AppContext } from "../Context";
 import { Link } from "react-router-dom";
 
 const Cart = () => {

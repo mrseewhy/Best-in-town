@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AppContext, AppContextProvider } from "../Context";
+import { AppContext } from "../Context";
 const Product = ({ name, image, price, description, plant }) => {
   const context = useContext(AppContext);
   if (!context) {

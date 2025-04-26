@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../Context";
-const ProductInCart = ({ name, image, price, description, plant }) => {
+const ProductInCart = ({ name, image, price, plant }) => {
   const context = useContext(AppContext);
   if (!context) {
     throw new Error("SomeComponent must be used within an AppContextProvider");

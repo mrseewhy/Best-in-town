@@ -332,7 +332,7 @@ const AppContextProvider = ({ children }: { children: ReactNode }) => {
 
   const clearCart = () => setCartItems([]);
 
-  const addQuantity = (item) => {
+  const addQuantity = (item: CartItem) => {
     setCartItems((prevCartItems) => {
       const itemExists = prevCartItems.find(
         (cartItem) => cartItem.id === item.id
@@ -365,7 +365,7 @@ const AppContextProvider = ({ children }: { children: ReactNode }) => {
     });
   };
 
-  const removeQuantity = (item) => {
+  const removeQuantity = (item: CartItem) => {
     setCartItems((prevCartItems) => {
       // Find if the item exists in the cart
       const itemExists = prevCartItems.find(
@@ -421,7 +421,7 @@ const AppContextProvider = ({ children }: { children: ReactNode }) => {
     });
   };
 
-  const removeItem = (item) => {
+  const removeItem = (item: CartItem) => {
     setCartItems((prevCartItems) => {
       // Remove the item completely from the cart
       const updatedCart = prevCartItems.filter(
