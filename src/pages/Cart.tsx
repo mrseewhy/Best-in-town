@@ -27,7 +27,6 @@ const Cart = () => {
                   name={plant.name}
                   image={plant.image}
                   price={plant.price}
-                  description={plant.description}
                   plant={plant}
                 />
               </div>

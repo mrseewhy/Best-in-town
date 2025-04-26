@@ -1,6 +1,19 @@
 import { useContext } from "react";
 import { AppContext } from "../Context";
-const Product = ({ name, image, price, description, plant }) => {
+interface ProductProps {
+  name: string;
+  image: string;
+  price: number;
+  description: string;
+  plant: any; // You can replace `any` with a more specific type if you know what 'plant' should be
+}
+const Product: React.FC<ProductProps> = ({
+  name,
+  image,
+  price,
+  description,
+  plant,
+}) => {
   const context = useContext(AppContext);
   if (!context) {
     throw new Error("SomeComponent must be used within an AppContextProvider");
